@@ -1,13 +1,13 @@
 # Ruby on Rails Development Application - Learning Ruby
 
-Everything here is about learning Ruby. Project based on the course "Dissecting Ruby on Rails 5: Become a Professional Developer" from Udemy.
+> Everything here is about learning Ruby. Project based on the course "Dissecting Ruby on Rails 5: Become a Professional Developer" from Udemy.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
 
 * System dependencies
 
@@ -23,4 +23,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+```ruby
+def taeneh
+  puts "Hello World!"
+end
+```
