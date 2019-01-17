@@ -1,4 +1,6 @@
-# README
+# Ruby on Rails Development Application - Learning Ruby
+
+Everything here is about learning Ruby. Project based on the course "Dissecting Ruby on Rails 5: Become a Professional Developer" from Udemy.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
