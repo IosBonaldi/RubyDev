@@ -5,6 +5,7 @@
   <ul>
     <li><%= portfolio_item.subtitle %></li>
     <li><%= portfolio_item.body %></li>
-    <li><%= image_tag portfolio_item.thumb_image %></li>
+    <!---Negative if could be replaced by unless--->
+    <li><%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %></li>
   </ul>
 <% end %>
