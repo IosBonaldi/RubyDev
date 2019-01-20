@@ -3,7 +3,8 @@
 <p><%= link_to "Add", new_portfolio_path %></p>
 
 <% @portfolio_items.each do |portfolio_item| %>
-  <h2><%= portfolio_item.title %></h2>
+  <!---<h2><%= portfolio_item.title %></h2>--->
+  <h2><%= link_to portfolio_item.title, portfolio_path(portfolio_item.id) %></h2>
   <p><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %></p>
   <!---<a href="/portfolios/<%=portfolio_item.id%>/edit">Edit</a>--->
   <ul>

@@ -1,0 +1,10 @@
+<h1><%= @portfolio_item.title %></h1>
+<span><%= @portfolio_item.subtitle %></span>
+  <p>
+    <%= link_to "Back", portfolios_path %>
+     <%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
+  </p>
+  <!---<a href="/portfolios/<%=@portfolio_item.id%>/edit">Edit</a>--->
+    <p><%= @portfolio_item.body %></p>
+    <!---Negative if could be replaced by unless--->
+    <%= image_tag @portfolio_item.main_image if !@portfolio_item.thumb_image.nil? %>
