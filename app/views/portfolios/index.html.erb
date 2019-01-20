@@ -1,0 +1,17 @@
+<h1>Portfolio Items</h1>
+
+<p><%= link_to "Add", new_portfolio_path %></p>
+
+<% @portfolio_items.each do |portfolio_item| %>
+  <!---<h2><%= portfolio_item.title %></h2>--->
+  <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h2>
+  <p><%= link_to "Edit", edit_portfolio_path(portfolio_item.id) %></p>
+  <p><%= link_to 'Destroy', portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <!---<a href="/portfolios/<%=portfolio_item.id%>/edit">Edit</a>--->
+  <ul>
+    <li><%= portfolio_item.subtitle %></li>
+    <li><%= portfolio_item.body %></li>
+    <!---Negative if could be replaced by unless--->
+    <li><%= image_tag portfolio_item.thumb_image if !portfolio_item.thumb_image.nil? %></li>
+  </ul>
+<% end %>
