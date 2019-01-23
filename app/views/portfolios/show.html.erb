@@ -7,5 +7,12 @@
   </p>
   <!---<a href="/portfolios/<%=@portfolio_item.id%>/edit">Edit</a>--->
     <p><%= @portfolio_item.body %></p>
+
+    <h2>Technologies Used:</h2>
+
+    <% @portfolio_item.technologies.each do |t| %>
+      <p><%= t.name %></p>
+    <% end %>
+
     <!---Negative if could be replaced by unless--->
     <%= image_tag @portfolio_item.main_image if !@portfolio_item.thumb_image.nil? %>
