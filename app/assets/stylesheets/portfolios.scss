@@ -2,17 +2,4 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  background-color: black;
-  color: white;
-}
-
-a{
-  color: red;
-  text-decoration-color: tomato;
-  text-decoration: underline;
-}
-
-.top a {
-  color: red;
-}
+@import "bootstrap";

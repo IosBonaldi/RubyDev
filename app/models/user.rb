@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates_presence_of :name
+
   def first_name
     self.name.split.first
   end
@@ -12,4 +13,13 @@ class User < ApplicationRecord
   def last_name
     self.name.split.last
   end
+
+  #def get_facebook_messages
+  #  begin
+  #    contact_fb
+  #    @messages = retrieves_messages
+  #  rescue => e
+  #    flash[:error] = "Errpr ocurred contacting Facebook: #{e}"
+  #  end
+  #end
 end
