@@ -14,4 +14,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def copyright_generator
+    BonaldiViewTool::Renderer.copyright "I.Bonaldi", "All rights reserved"
+  end
 end
