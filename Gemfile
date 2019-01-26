@@ -59,3 +59,4 @@ gem 'devise', '~> 4.5'
 gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 gem 'bonaldi_view_tool', git: "https://github.com/IosBonaldi/bonaldi_view_tool"
+gem 'petergate', '~> 1.6', '>= 1.6.3'
