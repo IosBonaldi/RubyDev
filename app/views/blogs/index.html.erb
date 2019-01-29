@@ -1,7 +1,5 @@
 <div class="col-sm-8 blog-main">
 
-  <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-
   <%= render @blogs %>
 
   <nav class="blog-pagination">
