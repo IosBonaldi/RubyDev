@@ -18,20 +18,23 @@
   </head>
 
   <body>
-    <%= render 'shared/portfolio_nav' %>
-    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin)%>
+    <div class="content">
+      <%= render 'shared/portfolio_nav' %>
+      <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin)%>
 
 
 
-    <!---<%= render "shared/nav", location: 'top' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <!---<%= render "shared/nav", location: 'top' %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>--->
+      <%= login_helper %>--->
 
-    <%= yield %>
+      <%= yield %>
 
-    <%= source_helper("application") %>
+      <%= source_helper("application") %>
+    </div>
+
   </body>
   <%= render 'shared/portfolio_footer' %>
 
