@@ -1,18 +1,36 @@
-<h1><%= @portfolio_item.title %></h1>
-<span><%= @portfolio_item.subtitle %></span>
-  <p>
-    <%= link_to "Back", portfolios_path %>
-     <%= link_to "Edit", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
-     <%= link_to 'Destroy', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
-  </p>
-  <!---<a href="/portfolios/<%=@portfolio_item.id%>/edit">Edit</a>--->
-    <p><%= @portfolio_item.body %></p>
+<div class="container">
+  <div class="mb-4 row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image if !@portfolio_item.thumb_image.nil? %>
+    </div>
 
-    <h2>Technologies Used:</h2>
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
 
-    <% @portfolio_item.technologies.each do |t| %>
-      <p><%= t.name %></p>
-    <% end %>
+<hr>
 
-    <!---Negative if could be replaced by unless--->
-    <%= image_tag @portfolio_item.main_image if !@portfolio_item.thumb_image.nil? %>
+      <h4><%= @portfolio_item.subtitle %></h4>
+
+
+
+
+      <p><%= @portfolio_item.body %></p>
+
+      <hr>
+
+      <h3>Technologies Used:</h3>
+      <% @portfolio_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+      <% end %>
+
+      <hr>
+
+      <p>
+        <%= link_to "View other items", portfolios_path %>
+        <%= link_to "Edit", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin) %>
+        <%= link_to 'Destroy', portfolio_path(@portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+      </p>
+
+    </div>
+  </div>
+</div>
