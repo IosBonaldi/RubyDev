@@ -5,7 +5,7 @@
 @import "bootstrap";
 
 body {
-  min-height: 75rem;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -55,10 +55,16 @@ body {
 }
 
 footer {
+  display: block;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 footer p {
   margin-bottom: .25rem;
+}
+
+.content{
+
+  min-height: calc(100vh - 150px);
 }
