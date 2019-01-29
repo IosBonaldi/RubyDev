@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order('created_at DESC').page(params[:page]).per(5)
     @page_title = "Blogs | Devcamp Portfolio"
   end
 
@@ -31,6 +31,7 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
+    @blog.topic = Topic.last
 
     respond_to do |format|
       if @blog.save
