@@ -17,6 +17,14 @@ class PortfoliosController < ApplicationController
     #@portfolio_items = Portfolio.ruby_on_rails_portfolio_items
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    head :ok
+  end
+
   def new
     @portfolio_item = Portfolio.new
     3.times {@portfolio_item.technologies.build}
