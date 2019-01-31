@@ -22,7 +22,22 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
 
-          <div id="background"></div>
+          <%= video_tag(
+              'video2.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'viale.jpg'
+            )
+          %>
+<!--
+          <%= image_tag(
+              'viale.jpg',
+              id: 'background'
+            )
+          %> -->
+          <!-- <div id="background"></div> -->
 
          <%= render "shared/application_nav"%>
 
