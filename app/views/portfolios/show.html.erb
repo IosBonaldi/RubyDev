@@ -1,7 +1,8 @@
 <div class="container mt-4">
   <div class="mb-4 row">
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image if !@portfolio_item.thumb_image.nil? %>
+      <%= image_tag portfolio_img(@portfolio_item.main_image.url, 'main'), width: "100%"%>
+
     </div>
 
     <div class="col-md-5">
